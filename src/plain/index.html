@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+  <head>
+    <title>Geolocation</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <!-- <div id="map"></div> -->
+    <div id="container">
+      <div id="map"></div>
+      <div id="HDFC"></div>
+      <input id="pac-input" class="controls" type="text" placeholder="Search Box" />
+      <div id="sidebar">
+        <h2>Results</h2>
+        <ul id="places"></ul>
+        <button id="more">Load more results</button>
+      </div>
+    </div>
+
+    <!-- 
+     The `defer` attribute causes the callback to execute after the full HTML
+     document has been parsed. For non-blocking uses, avoiding race conditions,
+     and consistent behavior across browsers, consider loading using Promises
+     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+    -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC68H9SdF9KiJWStgwPugHIgY_IILwefRo"></script> -->
+    <!-- src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC68H9SdF9KiJWStgwPugHIgY_IILwefRo&libraries=places&callback=initMap&v=weekly&callback=initAutoComplete&callback=initMapObj" -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC68H9SdF9KiJWStgwPugHIgY_IILwefRo&libraries=places&callback=initMap&v=weekly"
+      defer
+      referrerpolicy=""
+    ></script>
+  </body>
+</html>
